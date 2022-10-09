@@ -1,0 +1,180 @@
+---
+title: "Assignment"
+author: "Adnan Ovcina"
+date: "10/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,comment = NA, warning = F)
+
+#turn off scitenitific notation (column cost)
+options(scipen=999)
+
+if(!require("pacman")) install.packages("pacman")
+pacman::p_load(readxl,ppcor,lsr,car,semTools,viridis,ggpubr,DT,lubridate,gmodels,psych,usdm,irr,heplots,patchwork,shiny,tidyquant,broom,cowplot,openxlsx,timetk,AICcmodavg,ggpubr,lavaan,tidyverse, knitr,conflicted,semPlot,gglm,tidytext,docxtractr, seminr)
+```
+
+```{r, warning=FALSE, include=FALSE}
+# import csv files in data frame
+dataA <- read.csv('Sheet A.csv')
+dataB <- read.csv('Sheet B.csv')
+
+# check names of the columns
+names(dataA)
+names(dataB)
+
+# lower case all column names 
+clean_column_names <- function(dataFrame){
+  
+  num_of_columns <- length(names(dataFrame))
+  
+  for(i in 1:num_of_columns){
+    names(dataFrame)[i] <- tolower(names(dataFrame)[i])
+  }
+  print(names(dataFrame))
+}
+
+names(dataA) <- clean_column_names(dataA)
+names(dataB) <- clean_column_names(dataB)
+```
+
+# Descriptive statistics
+```{r, warning=FALSE}
+
+
+
+# correct error in name of foreign key Camoign.id => Campaign.id
+names(dataB)[1] <- "campaign.id"
+
+# join data
+joined_data_by_customerId <- left_join(dataA, dataB, by="campaign.id")
+
+unique_levels_in_status <- levels(factor(joined_data_by_customerId$status))
+
+# obtain descriptive statistics information
+kable(summary(joined_data_by_customerId))
+
+#check number of missing values
+missing_values <- joined_data_by_customerId %>% dplyr::filter(status %in% c('Paused','Rejected' ))
+
+#filter out Paused and Rejected campaigns and remove missing values
+joined_data_by_customerId <- joined_data_by_customerId %>% dplyr::filter(status == "Running") 
+
+# remove missing values from the database
+joined_data_by_customerId <- na.omit(joined_data_by_customerId)
+
+# check if for any conversion > 0, reported revenue is 0 
+data_entry_errors <- joined_data_by_customerId %>% dplyr::filter(conversions == 0, revenue > 0)
+
+# round all floating numbers to 2 decimals
+joined_data_by_customerId <- joined_data_by_customerId %>% mutate_if(is.numeric, ~round(.,digits=2))
+joined_data_by_customerId %>% dplyr::filter(conversions == 0, revenue > 0)
+
+# round all floating numbers to 2 decimals
+joined_data_by_customerId %>% mutate_if(is.numeric, ~round(.,digits=2))
+
+# check for outliers
+boxplot(joined_data_by_customerId$cost)
+title('Cost outliers')
+boxplot(joined_data_by_customerId$revenue)
+title('Revenue outliers')
+
+# check for errors in data entry (number of visits < number of conversions)
+errors <- joined_data_by_customerId %>% dplyr::filter(visits < conversions)
+
+# most of the cost data are in the range between 0 to 50. Histogram shows that data are not normally distributed
+revenue_histogram <- hist(joined_data_by_customerId$revenue)
+
+```
+
+
+## Cost VS revenue scatterplot and test of correlation
+
+```{r warning=FALSE,echo=FALSE, message=FALSE}
+
+# check data entry errors
+data_entry_errors <- joined_data_by_customerId %>% dplyr::filter(visits < conversions)
+
+# most of the cost data are in the range between 0 to 50. Histogram shows that data are not normally distributed
+revenue_histogram <- hist(joined_data_by_customerId$revenue)
+
+# plot spread of cost and revenue data points
+costVSrevenue_plot <- ggplot2::ggplot(joined_data_by_customerId, aes(cost, revenue)) +
+  geom_point()+
+  geom_smooth(method = lm, se=FALSE)+
+  theme_classic()
+
+costVSrevenue_plot
+
+# correlation test for cost and revenues
+cor.test(joined_data_by_customerId$cost, joined_data_by_customerId$revenue, method = "spearman")
+```
+
+## ROI per campaign
+
+```{r warning=FALSE,echo=FALSE}
+
+# calculate ROI
+ROI <- joined_data_by_customerId %>% 
+  mutate(ROI = round(((revenue - cost) / cost),digits = 2),
+         ROI_percent = scales::percent(ROI)) %>%
+         arrange(desc(ROI)) %>%
+         dplyr::select(campaign.id, ROI_percent, ROI, everything()) 
+
+kable(ROI)
+
+# highest ROI
+first_ten_results <- head(ROI)
+
+#lowest ROI
+last_ten_results <- tail(ROI)
+
+```
+
+# Total data
+
+## Total cost
+
+```{r warning=FALSE,echo=FALSE}
+
+formattable::comma(sum(joined_data_by_customerId$cost))
+
+```
+
+## Total profit
+
+```{r warning=FALSE,echo=FALSE}
+
+round(sum(joined_data_by_customerId$revenue) - sum(joined_data_by_customerId$cost),2)
+
+```
+
+## Total revenue
+
+```{r warning=FALSE,echo=FALSE}
+
+formattable::comma(round(sum(joined_data_by_customerId$revenue),2))
+
+```
+
+## Total conversions
+
+```{r warning=FALSE,echo=FALSE}
+
+formattable::comma(round(sum(joined_data_by_customerId$conversions),2))
+
+```
+
+
+```{r}
+
+#  Write joined data in Excel
+writexl::write_xlsx(joined_data_by_customerId,"Assignment.xlsx")
+
+```
+
+
+

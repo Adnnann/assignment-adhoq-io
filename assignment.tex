@@ -1,0 +1,1236 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Assignment}
+\author{Adnan Ovcina}
+\date{10/7/2022}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Assignment},
+  pdfauthor={Adnan Ovcina},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{descriptive-statistics}{%
+\section{Descriptive statistics}\label{descriptive-statistics}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.01}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.08}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.08}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.08}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 28\tabcolsep) * \real{0.07}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+campaign.id
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+hits
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+cost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+visits
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+clicks
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+conversions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+revenue
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ctr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+cr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+cv
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+epv
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+epc
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ap
+\end{minipage} \\
+\midrule
+\endhead
+& Min. :1120520 & Length:458 & Min. : 0 & Min. : 0.0000 & Min. : 1 &
+Min. : 0.0 & Min. : 0.00 & Min. : 0.00 & Min. :0.00000 & Min. :0.00000 &
+Min. :0.00000 & Min. :0.00000 & Min. :0.0000 & Min. : 0.000 \\
+& 1st Qu.:1281510 & Class :character & 1st Qu.: 12950 & 1st Qu.: 0.0000
+& 1st Qu.: 90 & 1st Qu.: 13.5 & 1st Qu.: 0.00 & 1st Qu.: 0.00 & 1st
+Qu.:0.09091 & 1st Qu.:0.00000 & 1st Qu.:0.00000 & 1st Qu.:0.00000 & 1st
+Qu.:0.0000 & 1st Qu.: 0.000 \\
+& Median :1311791 & Mode :character & Median : 104473 & Median : 0.1078
+& Median : 442 & Median : 77.0 & Median : 5.00 & Median : 16.00 & Median
+:0.16253 & Median :0.04688 & Median :0.00617 & Median :0.02000 & Median
+:0.1538 & Median : 2.506 \\
+& Mean :1405239 & NA & Mean : 559482 & Mean : 27.7665 & Mean : 2784 &
+Mean : 272.5 & Mean : 20.11 & Mean : 53.50 & Mean :0.21898 & Mean
+:0.06765 & Mean :0.01564 & Mean :0.04854 & Mean :0.2007 & Mean :
+2.409 \\
+& 3rd Qu.:1515334 & NA & 3rd Qu.: 447166 & 3rd Qu.: 13.9563 & 3rd Qu.:
+2004 & 3rd Qu.: 283.5 & 3rd Qu.: 19.00 & 3rd Qu.: 52.35 & 3rd
+Qu.:0.27781 & 3rd Qu.:0.10000 & 3rd Qu.:0.01993 & 3rd Qu.:0.05730 & 3rd
+Qu.:0.2851 & 3rd Qu.: 3.092 \\
+& Max. :1888370 & NA & Max. :13340810 & Max. :568.3886 & Max. :125687 &
+Max. :2937.0 & Max. :214.00 & Max. :625.40 & Max. :2.66667 & Max.
+:1.00000 & Max. :0.25000 & Max. :0.83330 & Max. :2.5714 & Max.
+:13.300 \\
+& NA & NA & NA's :205 & NA & NA's :219 & NA's :219 & NA's :219 & NA's
+:219 & NA's :219 & NA's :219 & NA's :219 & NA's :219 & NA's :219 & NA's
+:219 \\
+\bottomrule
+\end{longtable}
+
+\begin{verbatim}
+ [1] campaign.id status      hits        cost        visits      clicks     
+ [7] conversions revenue     ctr         cr          cv          epv        
+[13] epc         ap         
+<0 rows> (or 0-length row.names)
+\end{verbatim}
+
+\begin{verbatim}
+    campaign.id  status     hits   cost visits clicks conversions revenue  ctr
+1       1120520 Running   119298   3.52     73     33           5   12.70 0.45
+2       1531913 Running     3366   0.41      6     16           0    0.00 2.67
+4       1258260 Running   291989  36.16    812    158          16   40.70 0.19
+5       1124638 Running   721533  34.80    364     42           9   23.10 0.12
+6       1488427 Running  2560228 342.30  23090   1635         214  452.80 0.07
+7       1246514 Running   328911  40.82    695    128          15   37.20 0.18
+8       1123894 Running  1271739 503.48  54418   2173         171  432.00 0.04
+9       1700921 Running  1424093 144.01   1089    273          62  155.10 0.25
+10      1123898 Running   715027 201.63   7136   1027          70  175.40 0.14
+11      1521211 Running  1827813 197.32   5445    533         113  215.80 0.10
+12      1120848 Running    54333   5.58    337     73           8   19.90 0.22
+13      1439569 Running   614854   5.40    117     44           7   17.05 0.38
+14      1704535 Running 12681518 267.42   5013   1414         122  310.40 0.28
+15      1694305 Running  1849937 187.06    636    230          35   88.90 0.36
+16      1790565 Running  1060840  36.90    645     67          11   28.00 0.10
+17      1790567 Running   531609   4.60    100     28           7   14.70 0.28
+19      1790569 Running   862172  30.94    511    187          14   35.50 0.37
+20      1300855 Running   669787  67.41   1790    432          31   78.50 0.24
+22      1503383 Running   649675  12.04    189     77           9   21.95 0.41
+23      1335457 Running  1030513 244.12   2734    558         139  265.50 0.20
+25      1330607 Running  1714672 171.49  16268    823         119  258.75 0.05
+26      1698225 Running      397   0.08      3      1           0    0.00 0.33
+28      1490361 Running    60563   1.02     22      4           0    0.00 0.18
+29      1234110 Running   320058  10.20    168     30           5   12.70 0.18
+30      1807311 Running 11902013 289.80   3248   1317         124  313.20 0.41
+31      1807313 Running  5142652 292.77   3394    508         107  270.70 0.15
+32      1807315 Running    90804   4.62     77      9           1    2.60 0.12
+33      1503703 Running   154180   6.48    113      8           1    2.60 0.07
+35      1769695 Running  2368286 568.39   8610   2459         204  517.80 0.29
+36      1431525 Running  1618027 161.88   2683    467          38   94.00 0.17
+37      1622511 Running   971171 126.37   2423    699          44  111.40 0.29
+38      1234672 Running  1987949 468.06   2510    689         113  287.50 0.27
+39      1629425 Running    67396   7.41    703     43           3    7.00 0.06
+40      1487347 Running   264742  26.48   2757    156          17   36.50 0.06
+41      1698295 Running  3148984  73.45    641    342          31   78.80 0.53
+42      1431545 Running  1224356 122.98   6048    619          60  148.00 0.10
+43      1431551 Running  1024490 102.91   1412    309          25   63.20 0.22
+44      1245442 Running        0   0.00      1      0           0    0.00 0.00
+46      1331973 Running    10366   1.42    340     10           0    0.00 0.03
+47      1700869 Running    69622  15.80    359    221          31  112.15 0.62
+48      1303819 Running   554908  70.90  10130    941          79  218.95 0.09
+49      1531919 Running   172611   4.39     80     20           3   11.75 0.25
+50      1531921 Running       39   0.00      1      0           0    0.00 0.00
+51      1230366 Running   340234  33.00   1885    317          10   38.45 0.17
+54      1332027 Running   391803  51.15   1582    190          14   34.80 0.12
+55      1534779 Running      176   0.02      1      0           0    0.00 0.00
+56      1244732 Running   862459 107.04   1453    633          13   32.30 0.44
+57      1515581 Running  7743195 247.15   7925    860          35  117.20 0.11
+58      1807167 Running    37432   3.02     67     33           1    4.00 0.49
+59      1392449 Running     4634   0.59     16      1           0    0.00 0.06
+60      1284424 Running    90149  12.16   2107    245          10   38.15 0.12
+61      1400397 Running    11413   1.51    215     43           2    5.00 0.20
+63      1246548 Running  1418921  24.46    449    121           9   36.55 0.27
+65      1431135 Running   205528  17.44    593    232           4   16.75 0.39
+66      1807201 Running    88701  13.97    318    174          20   69.60 0.55
+67      1807205 Running    32289   4.95    105     53           3    7.95 0.50
+69      1807207 Running   129130  22.60    467    187          25   67.25 0.40
+70      1888370 Running    66798   5.83    224     72           2    5.35 0.32
+71      1790579 Running   261234   6.16    118     26           1    4.00 0.22
+72      1418355 Running    17092   2.24    123     27           1    8.00 0.22
+73      1790581 Running    43274   6.49    126     77          12   39.55 0.61
+74      1790583 Running    19862   0.18      4      6           1    2.60 1.50
+75      1300859 Running  3083678 257.60   8237   1253          84  261.05 0.15
+76      1281916 Running    65718   8.01    121     19           0    0.00 0.16
+77      1300869 Running  2090816 169.35  10245    255          28   74.15 0.02
+78      1418377 Running   120310  30.08   5642    340          13   34.10 0.06
+80      1253024 Running    85768   9.61    765     72           6   15.20 0.09
+81      1281952 Running   817364  98.88  12203    763          29   70.35 0.06
+82      1253028 Running    70575  10.73   1098     51           1    2.40 0.05
+83      1281956 Running   557305  67.41   5607    328          18   44.40 0.06
+84      1696681 Running   287111  34.46    558    109           8   19.75 0.20
+85      1431467 Running  1457351 116.75  12522   1372          34  136.35 0.11
+86      1431469 Running   123771   9.92    835    209           5   20.75 0.25
+88      1244846 Running  1129430 115.20   5188    497          21   51.00 0.10
+89      1442739 Running  4115776 511.59 125687   2937          95  282.80 0.02
+90      1244856 Running 13340810 245.26  13314    765          37   93.75 0.06
+91      1431495 Running    12640   1.05     25     10           1    2.40 0.40
+92      1694159 Running   152341 180.19   6696    480          44  113.20 0.07
+93      1521375 Running    44454  11.11    483     49           6   14.80 0.10
+94      1712099 Running   452669 452.67  24047   2337         213  625.40 0.10
+95      1245412 Running    45375  10.58    784     56          10   24.00 0.07
+96      1331941 Running   223527  17.92    676    187          18   44.80 0.28
+97      1391081 Running   332412  31.67    803    294          11   46.25 0.37
+98      1438955 Running   197208  49.53   3517    206           9   22.15 0.06
+99      1245422 Running    88567  33.45   3627    599          21   91.05 0.17
+102     1445881 Running    68936   9.90    220    113          18   58.45 0.51
+105     1374979 Running   447166  44.94   1875    222          11   22.55 0.12
+107     1379857 Running  1404410 318.65   6881   1078          87  208.21 0.16
+108     1272088 Running   287232  57.45    528     71           2    6.40 0.13
+109     1332005 Running    73349  14.59    148     70           8   25.60 0.47
+112     1299303 Running  1257477 266.82   5691   1588         165  404.00 0.28
+113     1299307 Running    52683  12.11    194     88           3    9.30 0.45
+114     1807213 Running   842796 112.97   2265    323          32   88.70 0.14
+115     1807227 Running  1030318 103.07   6192    634          41  113.95 0.10
+116     1281670 Running   119248  22.45    454    133           9   26.10 0.29
+117     1807239 Running    59905  10.96    184     77          13   38.65 0.42
+118     1807241 Running   161357  33.84    634    205          17   52.60 0.32
+119     1807247 Running    86448  13.85    839    122          11   32.75 0.15
+120     1281686 Running    95118  14.74   1714     97           9   26.40 0.06
+121     1245338 Running   234855  67.71   1228    484          45  138.00 0.39
+122     1509843 Running    58857   0.25      6      1           0    0.00 0.17
+123     1465815 Running  1220234 122.11  10552    627          65  153.55 0.06
+124     1818071 Running  1504483 194.68   1587    485          47  141.80 0.31
+125     1281508 Running  1684284 168.67   3363    903          71  206.55 0.27
+126     1281514 Running    12133   1.27     28     16           1    2.05 0.57
+127     1465841 Running   245259  49.18    691    184          23   48.20 0.27
+128     1281528 Running  1126241 112.86   5276    556          39  120.50 0.11
+129     1250302 Running   993169   5.64     92     40           6   15.75 0.43
+130     1788927 Running   136397  13.92    367     50           5   16.00 0.14
+131     1311747 Running   229275  24.25   1523    243           5   51.50 0.16
+132     1311751 Running   103730  15.66    779    217           4   12.75 0.28
+133     1487131 Running    64577  30.35    413    132           2    4.80 0.32
+134     1311787 Running    44840   5.18    272     99           4   13.95 0.36
+135     1311795 Running   611282  51.79   5103    788          21   55.90 0.15
+136     1311799 Running   168583  48.78   6133    614           9   26.55 0.10
+137     1248334 Running   198262  89.21   4494    963          30   80.45 0.21
+138     1293924 Running     6975   3.23     44     13           1    5.00 0.30
+139     1293926 Running    12928   1.37     26      1           0    0.00 0.04
+140     1230728 Running   207764  72.26   4336   1030          19   62.10 0.24
+141     1596067 Running     2835   6.24   2866     48           0    0.00 0.02
+142     1248434 Running   172890  22.61   1505    173           2    7.75 0.11
+143     1248468 Running     6788   0.96     59      8           0    0.00 0.14
+144     1248476 Running    13900   1.46    137      4           0    0.00 0.03
+145     1248478 Running     5775   3.11    164     43           0    0.00 0.26
+147     1311733 Running    58817  12.73    316     76           1    3.75 0.24
+148     1487095 Running  1054312 360.93  19561   2333          79  202.50 0.12
+149     1487135 Running   296347 117.90   1350    514          76  189.80 0.38
+150     1303927 Running    10141   1.06     15      1           0    0.00 0.07
+151     1303937 Running   140692  92.67    918    354          38   96.35 0.39
+152     1293972 Running   295457  95.77   5352    911          94  190.30 0.17
+153     1293974 Running   212212  27.55   1111     76          12   24.90 0.07
+154     1230758 Running   477561 185.78   8469   2101         182  452.90 0.25
+155     1305535 Running   103865  30.85   2574    256          13   33.50 0.10
+156     1305537 Running    19302   2.87    257     79           3    7.00 0.31
+157     1305539 Running     3055   0.92     90      7           1    1.80 0.08
+159     1487091 Running   389196  85.14   5356    740          65  151.95 0.14
+160     1257940 Running    18518   3.17    144      5           0    0.00 0.03
+161     1257942 Running    15634   2.36    121      6           0    0.00 0.05
+162     1257956 Running     1670   0.23      6      5           1    5.00 0.83
+164     1248748 Running     6753   1.08     35      0           0    0.00 0.00
+166     1531917 Running    10320   1.03     46     10           1    3.25 0.22
+167     1515575 Running     5249   0.31      5      2           0    0.00 0.40
+168     1418311 Running   117555  11.35    253    113           6   41.75 0.45
+169     1439559 Running  1703352  17.75    407     51           2   14.50 0.13
+170     1554511 Running    72385   7.26   1675    218           0    0.00 0.13
+171     1431127 Running    20909   1.14     18      8           0    0.00 0.44
+172     1282922 Running    34988   3.50    135     14           0    0.00 0.10
+173     1282924 Running    19187   1.92     81      8           0    0.00 0.10
+174     1790575 Running   125999  12.34    226    126           5   32.25 0.56
+175     1790577 Running   332472  13.42    230     47           2    8.75 0.20
+176     1330557 Running   407761  40.79   6521    351           6   19.40 0.05
+177     1418369 Running     1246   0.13     11      3           0    0.00 0.27
+178     1519493 Running   111863   5.31     94     16           4   29.00 0.17
+179     1282962 Running   568825  85.36    817     74           5   27.50 0.09
+180     1358753 Running    91848   9.23    645    168           0    0.00 0.26
+181     1442759 Running    22132   2.62     27      2           0    0.00 0.07
+182     1531849 Running     4487   0.45     19      2           0    0.00 0.11
+183     1608939 Running    60697   1.99     52      3           0    0.00 0.06
+184     1597933 Running   257320  51.28   7777    143           4    9.55 0.02
+185     1529859 Running    92146  14.86    381    127           9   23.10 0.33
+186     1272124 Running   215080  24.19   2717    124          10   34.80 0.05
+187     1272126 Running    54473  22.31    803    176           2    4.10 0.22
+188     1272128 Running   240205 107.00   6151   2057          57  157.46 0.33
+189     1303929 Running    48652   4.91     91      6           0    0.00 0.07
+190     1303939 Running      455   0.22      1      2           0    0.00 2.00
+191     1305559 Running    59423  17.19   1265    163           3    8.20 0.13
+192     1305561 Running     6444   0.80     90     23           0    0.00 0.26
+193     1305567 Running     2099   0.85     29      6           0    0.00 0.21
+194     1529841 Running   450895 121.67   3955    543          21   40.81 0.14
+195     1529843 Running   245899  68.36   2578    419           9   27.30 0.16
+196     1529847 Running    83075  13.89    741     88           2    5.10 0.12
+197     1287426 Running     6091   1.21     18      6           0    0.00 0.33
+199     1452051 Running  1661029  44.10    838    114           6   45.80 0.14
+200     1418305 Running    58693   1.50     17     16           0    0.00 0.94
+201     1790561 Running   178923   3.84     62      2           0    0.00 0.03
+202     1302115 Running   269509  27.03   1657    242           2   21.60 0.15
+203     1515645 Running    19924   1.27     25      3           0    0.00 0.12
+204     1302147 Running    10462   2.62    244     29           0    0.00 0.12
+205     1282978 Running     2012   0.30      1      0           0    0.00 0.00
+206     1282986 Running    15529   2.29    174     41           0    0.00 0.24
+207     1282994 Running     3158   0.40     14      5           0    0.00 0.36
+208     1476373 Running    13997   0.48      8      1           0    0.00 0.12
+209     1608995 Running   332843   2.35     49      9           1    2.80 0.18
+210     1293860 Running    45803   4.86    191     28           2    5.00 0.15
+212     1439571 Running  1029364   6.85    225     25           1    2.80 0.11
+214     1552835 Running     1027   0.10      3      0           0    0.00 0.00
+215     1442803 Running      756   0.08     10      2           0    0.00 0.20
+216     1293862 Running    16412   6.27    190     50           3   10.84 0.26
+217     1293866 Running    12950   5.64    231     64           3   26.60 0.28
+218     1303921 Running     1252   0.14      3      0           0    0.00 0.00
+219     1303931 Running      692   0.11      3      0           0    0.00 0.00
+220     1311613 Running   146186  27.81   1048    367           6   21.44 0.35
+221     1305489 Running     7985   2.30    114     27           0    0.00 0.24
+222     1305491 Running     1025   0.17      1      0           0    0.00 0.00
+223     1305493 Running      237   0.10      2      0           0    0.00 0.00
+224     1293902 Running    69384  16.55   1014    183           2    5.17 0.18
+225     1293904 Running    56182  18.92    932    202           4   25.50 0.22
+226     1303923 Running     4989   0.60     15      4           0    0.00 0.27
+227     1303935 Running     2110   0.32      8      1           1    0.00 0.12
+228     1305513 Running    30460   8.26    647     34           0    0.00 0.05
+229     1305517 Running      437   0.06      3      0           0    0.00 0.00
+230     1305519 Running     1077   0.33     19     13           0    0.00 0.68
+231     1303925 Running     3124   0.34     11      0           0    0.00 0.00
+232     1303933 Running     1665   0.25      3      0           0    0.00 0.00
+233     1311619 Running   197487  32.02   1690    309           1    2.50 0.18
+234     1305507 Running     3095   0.42     11      1           0    0.00 0.09
+235     1303999 Running      401   0.16     24      8           0    0.00 0.33
+236     1304001 Running    18235   6.24    286     32           0    0.00 0.11
+237     1304003 Running    17542   5.35    164     47           1    2.80 0.29
+238     1503815 Running   180849   3.90     67     17           0    0.00 0.25
+239     1790573 Running   689524  22.45    391     88          12   48.00 0.23
+240     1476461 Running   153038  20.91     29      7           3   18.00 0.24
+241     1455029 Running   516180  51.83    695     72           8   48.00 0.10
+242     1455039 Running   243584  24.36    175     23           4   24.00 0.13
+243     1455041 Running   339198  33.94    598     67           5   18.00 0.11
+244     1773557 Running    38491   5.74  18327     20           1    6.00 0.00
+245     1734263 Running     9678   0.97     64     13           0    0.00 0.20
+246     1807231 Running    46675   8.33    257     88           0    0.00 0.34
+247     1518347 Running   719635  13.24    286     26           1   13.30 0.09
+248     1694237 Running    56436   7.98    247     12           2    4.40 0.05
+249     1644839 Running   139162  19.15    314     76          12   63.50 0.24
+251     1609397 Running    52071   5.21    154     33           2   10.00 0.21
+252     1521599 Running     1641   0.19     25      0           0    0.00 0.00
+253     1465049 Running  1635916 163.94   2779    470          55  137.70 0.17
+254     1465051 Running   437711  43.86   1620    116          15   99.90 0.07
+255     1465053 Running   171961  17.20    519     71           2   10.00 0.14
+256     1465065 Running   384745  31.07  23748    444          26   25.60 0.02
+257     1465067 Running   131585  10.59    293     99          10   10.00 0.34
+258     1790559 Running   724172   6.22    105     23           2    6.00 0.22
+259     1537135 Running  1504147   6.27    142     20           2    7.00 0.14
+260     1528191 Running   452229  87.87   2029    205          47   99.60 0.10
+261     1534857 Running   213595  21.39   5512    128          22   52.10 0.02
+262     1518789 Running   130671  13.07    442     80           2    4.40 0.18
+263     1518791 Running   298928  29.98   3413    239          19   63.20 0.07
+264     1518793 Running   304378  30.53   1979    221          19   62.50 0.11
+265     1551049 Running  1201228  35.38    649    134          16   36.80 0.21
+266     1629395 Running   104473  10.45    465     85          11   31.20 0.18
+      cr   cv  epv  epc    ap
+1   0.15 0.07 0.17 0.38  2.54
+2   0.00 0.00 0.00 0.00  0.00
+4   0.10 0.02 0.05 0.26  2.54
+5   0.21 0.02 0.06 0.55  2.57
+6   0.13 0.01 0.02 0.28  2.12
+7   0.12 0.02 0.05 0.29  2.48
+8   0.08 0.00 0.01 0.20  2.53
+9   0.23 0.06 0.14 0.57  2.50
+10  0.07 0.01 0.02 0.17  2.51
+11  0.21 0.02 0.04 0.40  1.91
+12  0.11 0.02 0.06 0.27  2.49
+13  0.16 0.06 0.15 0.39  2.44
+14  0.09 0.02 0.06 0.22  2.54
+15  0.15 0.06 0.14 0.39  2.54
+16  0.16 0.02 0.04 0.42  2.55
+17  0.25 0.07 0.15 0.52  2.10
+19  0.07 0.03 0.07 0.19  2.54
+20  0.07 0.02 0.04 0.18  2.53
+22  0.12 0.05 0.12 0.29  2.44
+23  0.25 0.05 0.10 0.48  1.91
+25  0.14 0.01 0.02 0.31  2.17
+26  0.00 0.00 0.00 0.00  0.00
+28  0.00 0.00 0.00 0.00  0.00
+29  0.17 0.03 0.08 0.42  2.54
+30  0.09 0.04 0.10 0.24  2.53
+31  0.21 0.03 0.08 0.53  2.53
+32  0.11 0.01 0.03 0.29  2.60
+33  0.12 0.01 0.02 0.32  2.60
+35  0.08 0.02 0.06 0.21  2.54
+36  0.08 0.01 0.04 0.20  2.47
+37  0.06 0.02 0.05 0.16  2.53
+38  0.16 0.05 0.11 0.42  2.54
+39  0.07 0.00 0.01 0.16  2.33
+40  0.11 0.01 0.01 0.23  2.15
+41  0.09 0.05 0.12 0.23  2.54
+42  0.10 0.01 0.02 0.24  2.47
+43  0.08 0.02 0.04 0.20  2.53
+44  0.00 0.00 0.00 0.00  0.00
+46  0.00 0.00 0.00 0.00  0.00
+47  0.14 0.09 0.31 0.51  3.62
+48  0.08 0.01 0.02 0.23  2.77
+49  0.15 0.04 0.15 0.59  3.92
+50  0.00 0.00 0.00 0.00  0.00
+51  0.03 0.01 0.02 0.12  3.85
+54  0.07 0.01 0.02 0.18  2.49
+55  0.00 0.00 0.00 0.00  0.00
+56  0.02 0.01 0.02 0.05  2.48
+57  0.04 0.00 0.01 0.14  3.35
+58  0.03 0.01 0.06 0.12  4.00
+59  0.00 0.00 0.00 0.00  0.00
+60  0.04 0.00 0.02 0.16  3.82
+61  0.05 0.01 0.02 0.12  2.50
+63  0.07 0.02 0.08 0.30  4.06
+65  0.02 0.01 0.03 0.07  4.19
+66  0.11 0.06 0.22 0.40  3.48
+67  0.06 0.03 0.08 0.15  2.65
+69  0.13 0.05 0.14 0.36  2.69
+70  0.03 0.01 0.02 0.07  2.67
+71  0.04 0.01 0.03 0.15  4.00
+72  0.04 0.01 0.06 0.30  8.00
+73  0.16 0.10 0.31 0.51  3.30
+74  0.17 0.25 0.65 0.43  2.60
+75  0.07 0.01 0.03 0.21  3.11
+76  0.00 0.00 0.00 0.00  0.00
+77  0.11 0.00 0.01 0.29  2.65
+78  0.04 0.00 0.01 0.10  2.62
+80  0.08 0.01 0.02 0.21  2.53
+81  0.04 0.00 0.01 0.09  2.43
+82  0.02 0.00 0.00 0.05  2.40
+83  0.05 0.00 0.01 0.14  2.47
+84  0.07 0.01 0.04 0.18  2.47
+85  0.02 0.00 0.01 0.10  4.01
+86  0.02 0.01 0.02 0.10  4.15
+88  0.04 0.00 0.01 0.10  2.43
+89  0.03 0.00 0.00 0.10  2.98
+90  0.05 0.00 0.01 0.12  2.53
+91  0.10 0.04 0.10 0.24  2.40
+92  0.09 0.01 0.02 0.24  2.57
+93  0.12 0.01 0.03 0.30  2.47
+94  0.09 0.01 0.03 0.27  2.94
+95  0.18 0.01 0.03 0.43  2.40
+96  0.10 0.03 0.07 0.24  2.49
+97  0.04 0.01 0.06 0.16  4.20
+98  0.04 0.00 0.01 0.11  2.46
+99  0.04 0.01 0.03 0.15  4.34
+102 0.16 0.08 0.27 0.52  3.25
+105 0.05 0.01 0.01 0.10  2.05
+107 0.08 0.01 0.03 0.19  2.39
+108 0.03 0.00 0.01 0.09  3.20
+109 0.11 0.05 0.17 0.37  3.20
+112 0.10 0.03 0.07 0.25  2.45
+113 0.03 0.02 0.05 0.11  3.10
+114 0.10 0.01 0.04 0.27  2.77
+115 0.06 0.01 0.02 0.18  2.78
+116 0.07 0.02 0.06 0.20  2.90
+117 0.17 0.07 0.21 0.50  2.97
+118 0.08 0.03 0.08 0.26  3.09
+119 0.09 0.01 0.04 0.27  2.98
+120 0.09 0.01 0.02 0.27  2.93
+121 0.09 0.04 0.11 0.29  3.07
+122 0.00 0.00 0.00 0.00  0.00
+123 0.10 0.01 0.01 0.24  2.36
+124 0.10 0.03 0.09 0.29  3.02
+125 0.08 0.02 0.06 0.23  2.91
+126 0.06 0.04 0.07 0.13  2.05
+127 0.12 0.03 0.07 0.26  2.10
+128 0.07 0.01 0.02 0.22  3.09
+129 0.15 0.07 0.17 0.39  2.62
+130 0.10 0.01 0.04 0.32  3.20
+131 0.02 0.00 0.03 0.21 10.30
+132 0.02 0.01 0.02 0.06  3.19
+133 0.02 0.00 0.01 0.04  2.40
+134 0.04 0.01 0.05 0.14  3.49
+135 0.03 0.00 0.01 0.07  2.66
+136 0.01 0.00 0.00 0.04  2.95
+137 0.03 0.01 0.02 0.08  2.68
+138 0.08 0.02 0.11 0.38  5.00
+139 0.00 0.00 0.00 0.00  0.00
+140 0.02 0.00 0.01 0.06  3.27
+141 0.00 0.00 0.00 0.00  0.00
+142 0.01 0.00 0.01 0.04  3.88
+143 0.00 0.00 0.00 0.00  0.00
+144 0.00 0.00 0.00 0.00  0.00
+145 0.00 0.00 0.00 0.00  0.00
+147 0.01 0.00 0.01 0.05  3.75
+148 0.03 0.00 0.01 0.09  2.56
+149 0.15 0.06 0.14 0.37  2.50
+150 0.00 0.00 0.00 0.00  0.00
+151 0.11 0.04 0.10 0.27  2.54
+152 0.10 0.02 0.04 0.21  2.02
+153 0.16 0.01 0.02 0.33  2.08
+154 0.09 0.02 0.05 0.22  2.49
+155 0.05 0.01 0.01 0.13  2.58
+156 0.04 0.01 0.03 0.09  2.33
+157 0.14 0.01 0.02 0.26  1.80
+159 0.09 0.01 0.03 0.21  2.34
+160 0.00 0.00 0.00 0.00  0.00
+161 0.00 0.00 0.00 0.00  0.00
+162 0.20 0.17 0.83 1.00  5.00
+164 0.00 0.00 0.00 0.00  0.00
+166 0.10 0.02 0.07 0.32  3.25
+167 0.00 0.00 0.00 0.00  0.00
+168 0.05 0.02 0.16 0.37  6.96
+169 0.04 0.00 0.04 0.28  7.25
+170 0.00 0.00 0.00 0.00  0.00
+171 0.00 0.00 0.00 0.00  0.00
+172 0.00 0.00 0.00 0.00  0.00
+173 0.00 0.00 0.00 0.00  0.00
+174 0.04 0.02 0.14 0.26  6.45
+175 0.04 0.01 0.04 0.19  4.38
+176 0.02 0.00 0.00 0.06  3.23
+177 0.00 0.00 0.00 0.00  0.00
+178 0.25 0.04 0.31 1.81  7.25
+179 0.07 0.01 0.03 0.37  5.50
+180 0.00 0.00 0.00 0.00  0.00
+181 0.00 0.00 0.00 0.00  0.00
+182 0.00 0.00 0.00 0.00  0.00
+183 0.00 0.00 0.00 0.00  0.00
+184 0.03 0.00 0.00 0.07  2.39
+185 0.07 0.02 0.06 0.18  2.57
+186 0.08 0.00 0.01 0.28  3.48
+187 0.01 0.00 0.01 0.02  2.05
+188 0.03 0.01 0.03 0.08  2.76
+189 0.00 0.00 0.00 0.00  0.00
+190 0.00 0.00 0.00 0.00  0.00
+191 0.02 0.00 0.01 0.05  2.73
+192 0.00 0.00 0.00 0.00  0.00
+193 0.00 0.00 0.00 0.00  0.00
+194 0.04 0.01 0.01 0.08  1.94
+195 0.02 0.00 0.01 0.07  3.03
+196 0.02 0.00 0.01 0.06  2.55
+197 0.00 0.00 0.00 0.00  0.00
+199 0.05 0.01 0.05 0.40  7.63
+200 0.00 0.00 0.00 0.00  0.00
+201 0.00 0.00 0.00 0.00  0.00
+202 0.01 0.00 0.01 0.09 10.80
+203 0.00 0.00 0.00 0.00  0.00
+204 0.00 0.00 0.00 0.00  0.00
+205 0.00 0.00 0.00 0.00  0.00
+206 0.00 0.00 0.00 0.00  0.00
+207 0.00 0.00 0.00 0.00  0.00
+208 0.00 0.00 0.00 0.00  0.00
+209 0.11 0.02 0.06 0.31  2.80
+210 0.07 0.01 0.03 0.18  2.50
+212 0.04 0.00 0.01 0.11  2.80
+214 0.00 0.00 0.00 0.00  0.00
+215 0.00 0.00 0.00 0.00  0.00
+216 0.06 0.02 0.06 0.22  3.61
+217 0.05 0.01 0.12 0.42  8.87
+218 0.00 0.00 0.00 0.00  0.00
+219 0.00 0.00 0.00 0.00  0.00
+220 0.02 0.01 0.02 0.06  3.57
+221 0.00 0.00 0.00 0.00  0.00
+222 0.00 0.00 0.00 0.00  0.00
+223 0.00 0.00 0.00 0.00  0.00
+224 0.01 0.00 0.01 0.03  2.59
+225 0.02 0.00 0.03 0.13  6.38
+226 0.00 0.00 0.00 0.00  0.00
+227 1.00 0.12 0.00 0.00  0.00
+228 0.00 0.00 0.00 0.00  0.00
+229 0.00 0.00 0.00 0.00  0.00
+230 0.00 0.00 0.00 0.00  0.00
+231 0.00 0.00 0.00 0.00  0.00
+232 0.00 0.00 0.00 0.00  0.00
+233 0.00 0.00 0.00 0.01  2.50
+234 0.00 0.00 0.00 0.00  0.00
+235 0.00 0.00 0.00 0.00  0.00
+236 0.00 0.00 0.00 0.00  0.00
+237 0.02 0.01 0.02 0.06  2.80
+238 0.00 0.00 0.00 0.00  0.00
+239 0.14 0.03 0.12 0.55  4.00
+240 0.43 0.10 0.62 2.57  6.00
+241 0.11 0.01 0.07 0.67  6.00
+242 0.17 0.02 0.14 1.04  6.00
+243 0.07 0.01 0.03 0.27  3.60
+244 0.05 0.00 0.00 0.30  6.00
+245 0.00 0.00 0.00 0.00  0.00
+246 0.00 0.00 0.00 0.00  0.00
+247 0.04 0.00 0.05 0.51 13.30
+248 0.17 0.01 0.02 0.37  2.20
+249 0.16 0.04 0.20 0.84  5.29
+251 0.06 0.01 0.06 0.30  5.00
+252 0.00 0.00 0.00 0.00  0.00
+253 0.12 0.02 0.05 0.29  2.50
+254 0.13 0.01 0.06 0.86  6.66
+255 0.03 0.00 0.02 0.14  5.00
+256 0.06 0.00 0.00 0.06  0.98
+257 0.10 0.03 0.03 0.10  1.00
+258 0.09 0.02 0.06 0.26  3.00
+259 0.10 0.01 0.05 0.35  3.50
+260 0.23 0.02 0.05 0.49  2.12
+261 0.17 0.00 0.01 0.41  2.37
+262 0.03 0.00 0.01 0.06  2.20
+263 0.08 0.01 0.02 0.26  3.33
+264 0.09 0.01 0.03 0.28  3.29
+265 0.12 0.02 0.06 0.27  2.30
+266 0.13 0.02 0.07 0.37  2.84
+\end{verbatim}
+
+\includegraphics{assignment_files/figure-latex/unnamed-chunk-2-1.pdf}
+\includegraphics{assignment_files/figure-latex/unnamed-chunk-2-2.pdf}
+\includegraphics{assignment_files/figure-latex/unnamed-chunk-2-3.pdf}
+
+\hypertarget{cost-vs-revenue-scatterplot-and-test-of-correlation}{%
+\subsection{Cost VS revenue scatterplot and test of
+correlation}\label{cost-vs-revenue-scatterplot-and-test-of-correlation}}
+
+\includegraphics{assignment_files/figure-latex/unnamed-chunk-3-1.pdf}
+\includegraphics{assignment_files/figure-latex/unnamed-chunk-3-2.pdf}
+
+\begin{verbatim}
+    Spearman's rank correlation rho
+
+data:  joined_data_by_customerId$cost and joined_data_by_customerId$revenue
+S = 216618, p-value < 0.00000000000000022
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.9023643 
+\end{verbatim}
+
+\hypertarget{roi-per-campaign}{%
+\subsection{ROI per campaign}\label{roi-per-campaign}}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.10}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.10}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.05}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.07}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.08}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.06}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.06}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.06}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.10}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.07}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 30\tabcolsep) * \real{0.05}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedleft
+campaign.id
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ROI\_percent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+ROI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+hits
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+cost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+visits
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+clicks
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+conversions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+revenue
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+ctr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+cr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+cv
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+epv
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+epc
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+ap
+\end{minipage} \\
+\midrule
+\endhead
+1257956 & 2 074.0\% & 20.74 & Running & 1670 & 0.23 & 6 & 5 & 1 & 5.00 &
+0.83 & 0.20 & 0.17 & 0.83 & 1.00 & 5.00 \\
+1790583 & 1 344.0\% & 13.44 & Running & 19862 & 0.18 & 4 & 6 & 1 & 2.60
+& 1.50 & 0.17 & 0.25 & 0.65 & 0.43 & 2.60 \\
+1700869 & 610.0\% & 6.10 & Running & 69622 & 15.80 & 359 & 221 & 31 &
+112.15 & 0.62 & 0.14 & 0.09 & 0.31 & 0.51 & 3.62 \\
+1790581 & 509.0\% & 5.09 & Running & 43274 & 6.49 & 126 & 77 & 12 &
+39.55 & 0.61 & 0.16 & 0.10 & 0.31 & 0.51 & 3.30 \\
+1445881 & 490.0\% & 4.90 & Running & 68936 & 9.90 & 220 & 113 & 18 &
+58.45 & 0.51 & 0.16 & 0.08 & 0.27 & 0.52 & 3.25 \\
+1519493 & 446.0\% & 4.46 & Running & 111863 & 5.31 & 94 & 16 & 4 & 29.00
+& 0.17 & 0.25 & 0.04 & 0.31 & 1.81 & 7.25 \\
+1807201 & 398.0\% & 3.98 & Running & 88701 & 13.97 & 318 & 174 & 20 &
+69.60 & 0.55 & 0.11 & 0.06 & 0.22 & 0.40 & 3.48 \\
+1293866 & 372.0\% & 3.72 & Running & 12950 & 5.64 & 231 & 64 & 3 & 26.60
+& 0.28 & 0.05 & 0.01 & 0.12 & 0.42 & 8.87 \\
+1418311 & 268.0\% & 2.68 & Running & 117555 & 11.35 & 253 & 113 & 6 &
+41.75 & 0.45 & 0.05 & 0.02 & 0.16 & 0.37 & 6.96 \\
+1120520 & 261.0\% & 2.61 & Running & 119298 & 3.52 & 73 & 33 & 5 & 12.70
+& 0.45 & 0.15 & 0.07 & 0.17 & 0.38 & 2.54 \\
+1120848 & 257.0\% & 2.57 & Running & 54333 & 5.58 & 337 & 73 & 8 & 19.90
+& 0.22 & 0.11 & 0.02 & 0.06 & 0.27 & 2.49 \\
+1418355 & 257.0\% & 2.57 & Running & 17092 & 2.24 & 123 & 27 & 1 & 8.00
+& 0.22 & 0.04 & 0.01 & 0.06 & 0.30 & 8.00 \\
+1807239 & 253.0\% & 2.53 & Running & 59905 & 10.96 & 184 & 77 & 13 &
+38.65 & 0.42 & 0.17 & 0.07 & 0.21 & 0.50 & 2.97 \\
+1644839 & 232.0\% & 2.32 & Running & 139162 & 19.15 & 314 & 76 & 12 &
+63.50 & 0.24 & 0.16 & 0.04 & 0.20 & 0.84 & 5.29 \\
+1400397 & 231.0\% & 2.31 & Running & 11413 & 1.51 & 215 & 43 & 2 & 5.00
+& 0.20 & 0.05 & 0.01 & 0.02 & 0.12 & 2.50 \\
+1790567 & 220.0\% & 2.20 & Running & 531609 & 4.60 & 100 & 28 & 7 &
+14.70 & 0.28 & 0.25 & 0.07 & 0.15 & 0.52 & 2.10 \\
+1439569 & 216.0\% & 2.16 & Running & 614854 & 5.40 & 117 & 44 & 7 &
+17.05 & 0.38 & 0.16 & 0.06 & 0.15 & 0.39 & 2.44 \\
+1531917 & 216.0\% & 2.16 & Running & 10320 & 1.03 & 46 & 10 & 1 & 3.25 &
+0.22 & 0.10 & 0.02 & 0.07 & 0.32 & 3.25 \\
+1284424 & 214.0\% & 2.14 & Running & 90149 & 12.16 & 2107 & 245 & 10 &
+38.15 & 0.12 & 0.04 & 0.00 & 0.02 & 0.16 & 3.82 \\
+1303819 & 209.0\% & 2.09 & Running & 554908 & 70.90 & 10130 & 941 & 79 &
+218.95 & 0.09 & 0.08 & 0.01 & 0.02 & 0.23 & 2.77 \\
+1629395 & 199.0\% & 1.99 & Running & 104473 & 10.45 & 465 & 85 & 11 &
+31.20 & 0.18 & 0.13 & 0.02 & 0.07 & 0.37 & 2.84 \\
+1807207 & 198.0\% & 1.98 & Running & 129130 & 22.60 & 467 & 187 & 25 &
+67.25 & 0.40 & 0.13 & 0.05 & 0.14 & 0.36 & 2.69 \\
+1250302 & 179.0\% & 1.79 & Running & 993169 & 5.64 & 92 & 40 & 6 & 15.75
+& 0.43 & 0.15 & 0.07 & 0.17 & 0.39 & 2.62 \\
+1245422 & 172.0\% & 1.72 & Running & 88567 & 33.45 & 3627 & 599 & 21 &
+91.05 & 0.17 & 0.04 & 0.01 & 0.03 & 0.15 & 4.34 \\
+1311787 & 169.0\% & 1.69 & Running & 44840 & 5.18 & 272 & 99 & 4 & 13.95
+& 0.36 & 0.04 & 0.01 & 0.05 & 0.14 & 3.49 \\
+1531919 & 168.0\% & 1.68 & Running & 172611 & 4.39 & 80 & 20 & 3 & 11.75
+& 0.25 & 0.15 & 0.04 & 0.15 & 0.59 & 3.92 \\
+1790575 & 161.0\% & 1.61 & Running & 125999 & 12.34 & 226 & 126 & 5 &
+32.25 & 0.56 & 0.04 & 0.02 & 0.14 & 0.26 & 6.45 \\
+1331941 & 150.0\% & 1.50 & Running & 223527 & 17.92 & 676 & 187 & 18 &
+44.80 & 0.28 & 0.10 & 0.03 & 0.07 & 0.24 & 2.49 \\
+1230758 & 144.0\% & 1.44 & Running & 477561 & 185.78 & 8469 & 2101 & 182
+& 452.90 & 0.25 & 0.09 & 0.02 & 0.05 & 0.22 & 2.49 \\
+1305537 & 144.0\% & 1.44 & Running & 19302 & 2.87 & 257 & 79 & 3 & 7.00
+& 0.31 & 0.04 & 0.01 & 0.03 & 0.09 & 2.33 \\
+1534857 & 144.0\% & 1.44 & Running & 213595 & 21.39 & 5512 & 128 & 22 &
+52.10 & 0.02 & 0.17 & 0.00 & 0.01 & 0.41 & 2.37 \\
+1807247 & 136.0\% & 1.36 & Running & 86448 & 13.85 & 839 & 122 & 11 &
+32.75 & 0.15 & 0.09 & 0.01 & 0.04 & 0.27 & 2.98 \\
+1431495 & 129.0\% & 1.29 & Running & 12640 & 1.05 & 25 & 10 & 1 & 2.40 &
+0.40 & 0.10 & 0.04 & 0.10 & 0.24 & 2.40 \\
+1465051 & 128.0\% & 1.28 & Running & 437711 & 43.86 & 1620 & 116 & 15 &
+99.90 & 0.07 & 0.13 & 0.01 & 0.06 & 0.86 & 6.66 \\
+1245412 & 127.0\% & 1.27 & Running & 45375 & 10.58 & 784 & 56 & 10 &
+24.00 & 0.07 & 0.18 & 0.01 & 0.03 & 0.43 & 2.40 \\
+1790573 & 114.0\% & 1.14 & Running & 689524 & 22.45 & 391 & 88 & 12 &
+48.00 & 0.23 & 0.14 & 0.03 & 0.12 & 0.55 & 4.00 \\
+1311747 & 112.0\% & 1.12 & Running & 229275 & 24.25 & 1523 & 243 & 5 &
+51.50 & 0.16 & 0.02 & 0.00 & 0.03 & 0.21 & 10.30 \\
+1518791 & 111.0\% & 1.11 & Running & 298928 & 29.98 & 3413 & 239 & 19 &
+63.20 & 0.07 & 0.08 & 0.01 & 0.02 & 0.26 & 3.33 \\
+1431469 & 109.0\% & 1.09 & Running & 123771 & 9.92 & 835 & 209 & 5 &
+20.75 & 0.25 & 0.02 & 0.01 & 0.02 & 0.10 & 4.15 \\
+1518793 & 105.0\% & 1.05 & Running & 304378 & 30.53 & 1979 & 221 & 19 &
+62.50 & 0.11 & 0.09 & 0.01 & 0.03 & 0.28 & 3.29 \\
+1245338 & 104.0\% & 1.04 & Running & 234855 & 67.71 & 1228 & 484 & 45 &
+138.00 & 0.39 & 0.09 & 0.04 & 0.11 & 0.29 & 3.07 \\
+1293972 & 99.0\% & 0.99 & Running & 295457 & 95.77 & 5352 & 911 & 94 &
+190.30 & 0.17 & 0.10 & 0.02 & 0.04 & 0.21 & 2.02 \\
+1305539 & 96.0\% & 0.96 & Running & 3055 & 0.92 & 90 & 7 & 1 & 1.80 &
+0.08 & 0.14 & 0.01 & 0.02 & 0.26 & 1.80 \\
+1609397 & 92.0\% & 0.92 & Running & 52071 & 5.21 & 154 & 33 & 2 & 10.00
+& 0.21 & 0.06 & 0.01 & 0.06 & 0.30 & 5.00 \\
+1503383 & 82.0\% & 0.82 & Running & 649675 & 12.04 & 189 & 77 & 9 &
+21.95 & 0.41 & 0.12 & 0.05 & 0.12 & 0.29 & 2.44 \\
+1281686 & 79.0\% & 0.79 & Running & 95118 & 14.74 & 1714 & 97 & 9 &
+26.40 & 0.06 & 0.09 & 0.01 & 0.02 & 0.27 & 2.93 \\
+1487091 & 78.0\% & 0.78 & Running & 389196 & 85.14 & 5356 & 740 & 65 &
+151.95 & 0.14 & 0.09 & 0.01 & 0.03 & 0.21 & 2.34 \\
+1332005 & 75.0\% & 0.75 & Running & 73349 & 14.59 & 148 & 70 & 8 & 25.60
+& 0.47 & 0.11 & 0.05 & 0.17 & 0.37 & 3.20 \\
+1293862 & 73.0\% & 0.73 & Running & 16412 & 6.27 & 190 & 50 & 3 & 10.84
+& 0.26 & 0.06 & 0.02 & 0.06 & 0.22 & 3.61 \\
+1807205 & 61.0\% & 0.61 & Running & 32289 & 4.95 & 105 & 53 & 3 & 7.95 &
+0.50 & 0.06 & 0.03 & 0.08 & 0.15 & 2.65 \\
+1281514 & 61.0\% & 0.61 & Running & 12133 & 1.27 & 28 & 16 & 1 & 2.05 &
+0.57 & 0.06 & 0.04 & 0.07 & 0.13 & 2.05 \\
+1487135 & 61.0\% & 0.61 & Running & 296347 & 117.90 & 1350 & 514 & 76 &
+189.80 & 0.38 & 0.15 & 0.06 & 0.14 & 0.37 & 2.50 \\
+1253024 & 58.0\% & 0.58 & Running & 85768 & 9.61 & 765 & 72 & 6 & 15.20
+& 0.09 & 0.08 & 0.01 & 0.02 & 0.21 & 2.53 \\
+1807241 & 55.0\% & 0.55 & Running & 161357 & 33.84 & 634 & 205 & 17 &
+52.60 & 0.32 & 0.08 & 0.03 & 0.08 & 0.26 & 3.09 \\
+1293924 & 55.0\% & 0.55 & Running & 6975 & 3.23 & 44 & 13 & 1 & 5.00 &
+0.30 & 0.08 & 0.02 & 0.11 & 0.38 & 5.00 \\
+1529859 & 55.0\% & 0.55 & Running & 92146 & 14.86 & 381 & 127 & 9 &
+23.10 & 0.33 & 0.07 & 0.02 & 0.06 & 0.18 & 2.57 \\
+1330607 & 51.0\% & 0.51 & Running & 1714672 & 171.49 & 16268 & 823 & 119
+& 258.75 & 0.05 & 0.14 & 0.01 & 0.02 & 0.31 & 2.17 \\
+1299303 & 51.0\% & 0.51 & Running & 1257477 & 266.82 & 5691 & 1588 & 165
+& 404.00 & 0.28 & 0.10 & 0.03 & 0.07 & 0.25 & 2.45 \\
+1246548 & 49.0\% & 0.49 & Running & 1418921 & 24.46 & 449 & 121 & 9 &
+36.55 & 0.27 & 0.07 & 0.02 & 0.08 & 0.30 & 4.06 \\
+1272128 & 47.0\% & 0.47 & Running & 240205 & 107.00 & 6151 & 2057 & 57 &
+157.46 & 0.33 & 0.03 & 0.01 & 0.03 & 0.08 & 2.76 \\
+1391081 & 46.0\% & 0.46 & Running & 332412 & 31.67 & 803 & 294 & 11 &
+46.25 & 0.37 & 0.04 & 0.01 & 0.06 & 0.16 & 4.20 \\
+1272124 & 44.0\% & 0.44 & Running & 215080 & 24.19 & 2717 & 124 & 10 &
+34.80 & 0.05 & 0.08 & 0.00 & 0.01 & 0.28 & 3.48 \\
+1487347 & 38.0\% & 0.38 & Running & 264742 & 26.48 & 2757 & 156 & 17 &
+36.50 & 0.06 & 0.11 & 0.01 & 0.01 & 0.23 & 2.15 \\
+1712099 & 38.0\% & 0.38 & Running & 452669 & 452.67 & 24047 & 2337 & 213
+& 625.40 & 0.10 & 0.09 & 0.01 & 0.03 & 0.27 & 2.94 \\
+1293904 & 35.0\% & 0.35 & Running & 56182 & 18.92 & 932 & 202 & 4 &
+25.50 & 0.22 & 0.02 & 0.00 & 0.03 & 0.13 & 6.38 \\
+1521375 & 33.0\% & 0.33 & Running & 44454 & 11.11 & 483 & 49 & 6 & 14.80
+& 0.10 & 0.12 & 0.01 & 0.03 & 0.30 & 2.47 \\
+1488427 & 32.0\% & 0.32 & Running & 2560228 & 342.30 & 23090 & 1635 &
+214 & 452.80 & 0.07 & 0.13 & 0.01 & 0.02 & 0.28 & 2.12 \\
+1807167 & 32.0\% & 0.32 & Running & 37432 & 3.02 & 67 & 33 & 1 & 4.00 &
+0.49 & 0.03 & 0.01 & 0.06 & 0.12 & 4.00 \\
+1465815 & 26.0\% & 0.26 & Running & 1220234 & 122.11 & 10552 & 627 & 65
+& 153.55 & 0.06 & 0.10 & 0.01 & 0.01 & 0.24 & 2.36 \\
+1234110 & 25.0\% & 0.25 & Running & 320058 & 10.20 & 168 & 30 & 5 &
+12.70 & 0.18 & 0.17 & 0.03 & 0.08 & 0.42 & 2.54 \\
+1281508 & 22.0\% & 0.22 & Running & 1684284 & 168.67 & 3363 & 903 & 71 &
+206.55 & 0.27 & 0.08 & 0.02 & 0.06 & 0.23 & 2.91 \\
+1431545 & 20.0\% & 0.20 & Running & 1224356 & 122.98 & 6048 & 619 & 60 &
+148.00 & 0.10 & 0.10 & 0.01 & 0.02 & 0.24 & 2.47 \\
+1608995 & 19.0\% & 0.19 & Running & 332843 & 2.35 & 49 & 9 & 1 & 2.80 &
+0.18 & 0.11 & 0.02 & 0.06 & 0.31 & 2.80 \\
+1230366 & 17.0\% & 0.17 & Running & 340234 & 33.00 & 1885 & 317 & 10 &
+38.45 & 0.17 & 0.03 & 0.01 & 0.02 & 0.12 & 3.85 \\
+1431467 & 17.0\% & 0.17 & Running & 1457351 & 116.75 & 12522 & 1372 & 34
+& 136.35 & 0.11 & 0.02 & 0.00 & 0.01 & 0.10 & 4.01 \\
+1704535 & 16.0\% & 0.16 & Running & 12681518 & 267.42 & 5013 & 1414 &
+122 & 310.40 & 0.28 & 0.09 & 0.02 & 0.06 & 0.22 & 2.54 \\
+1300855 & 16.0\% & 0.16 & Running & 669787 & 67.41 & 1790 & 432 & 31 &
+78.50 & 0.24 & 0.07 & 0.02 & 0.04 & 0.18 & 2.53 \\
+1281670 & 16.0\% & 0.16 & Running & 119248 & 22.45 & 454 & 133 & 9 &
+26.10 & 0.29 & 0.07 & 0.02 & 0.06 & 0.20 & 2.90 \\
+1790569 & 15.0\% & 0.15 & Running & 862172 & 30.94 & 511 & 187 & 14 &
+35.50 & 0.37 & 0.07 & 0.03 & 0.07 & 0.19 & 2.54 \\
+1788927 & 15.0\% & 0.15 & Running & 136397 & 13.92 & 367 & 50 & 5 &
+16.00 & 0.14 & 0.10 & 0.01 & 0.04 & 0.32 & 3.20 \\
+1258260 & 13.0\% & 0.13 & Running & 291989 & 36.16 & 812 & 158 & 16 &
+40.70 & 0.19 & 0.10 & 0.02 & 0.05 & 0.26 & 2.54 \\
+1418377 & 13.0\% & 0.13 & Running & 120310 & 30.08 & 5642 & 340 & 13 &
+34.10 & 0.06 & 0.04 & 0.00 & 0.01 & 0.10 & 2.62 \\
+1528191 & 13.0\% & 0.13 & Running & 452229 & 87.87 & 2029 & 205 & 47 &
+99.60 & 0.10 & 0.23 & 0.02 & 0.05 & 0.49 & 2.12 \\
+1537135 & 12.0\% & 0.12 & Running & 1504147 & 6.27 & 142 & 20 & 2 & 7.00
+& 0.14 & 0.10 & 0.01 & 0.05 & 0.35 & 3.50 \\
+1807227 & 11.0\% & 0.11 & Running & 1030318 & 103.07 & 6192 & 634 & 41 &
+113.95 & 0.10 & 0.06 & 0.01 & 0.02 & 0.18 & 2.78 \\
+1521211 & 9.0\% & 0.09 & Running & 1827813 & 197.32 & 5445 & 533 & 113 &
+215.80 & 0.10 & 0.21 & 0.02 & 0.04 & 0.40 & 1.91 \\
+1335457 & 9.0\% & 0.09 & Running & 1030513 & 244.12 & 2734 & 558 & 139 &
+265.50 & 0.20 & 0.25 & 0.05 & 0.10 & 0.48 & 1.91 \\
+1305535 & 9.0\% & 0.09 & Running & 103865 & 30.85 & 2574 & 256 & 13 &
+33.50 & 0.10 & 0.05 & 0.01 & 0.01 & 0.13 & 2.58 \\
+1700921 & 8.0\% & 0.08 & Running & 1424093 & 144.01 & 1089 & 273 & 62 &
+155.10 & 0.25 & 0.23 & 0.06 & 0.14 & 0.57 & 2.50 \\
+1807311 & 8.0\% & 0.08 & Running & 11902013 & 289.80 & 3248 & 1317 & 124
+& 313.20 & 0.41 & 0.09 & 0.04 & 0.10 & 0.24 & 2.53 \\
+1311795 & 8.0\% & 0.08 & Running & 611282 & 51.79 & 5103 & 788 & 21 &
+55.90 & 0.15 & 0.03 & 0.00 & 0.01 & 0.07 & 2.66 \\
+1698295 & 7.0\% & 0.07 & Running & 3148984 & 73.45 & 641 & 342 & 31 &
+78.80 & 0.53 & 0.09 & 0.05 & 0.12 & 0.23 & 2.54 \\
+1281528 & 7.0\% & 0.07 & Running & 1126241 & 112.86 & 5276 & 556 & 39 &
+120.50 & 0.11 & 0.07 & 0.01 & 0.02 & 0.22 & 3.09 \\
+1773557 & 5.0\% & 0.05 & Running & 38491 & 5.74 & 18327 & 20 & 1 & 6.00
+& 0.00 & 0.05 & 0.00 & 0.00 & 0.30 & 6.00 \\
+1303937 & 4.0\% & 0.04 & Running & 140692 & 92.67 & 918 & 354 & 38 &
+96.35 & 0.39 & 0.11 & 0.04 & 0.10 & 0.27 & 2.54 \\
+1452051 & 4.0\% & 0.04 & Running & 1661029 & 44.10 & 838 & 114 & 6 &
+45.80 & 0.14 & 0.05 & 0.01 & 0.05 & 0.40 & 7.63 \\
+1551049 & 4.0\% & 0.04 & Running & 1201228 & 35.38 & 649 & 134 & 16 &
+36.80 & 0.21 & 0.12 & 0.02 & 0.06 & 0.27 & 2.30 \\
+1293860 & 3.0\% & 0.03 & Running & 45803 & 4.86 & 191 & 28 & 2 & 5.00 &
+0.15 & 0.07 & 0.01 & 0.03 & 0.18 & 2.50 \\
+1300859 & 1.0\% & 0.01 & Running & 3083678 & 257.60 & 8237 & 1253 & 84 &
+261.05 & 0.15 & 0.07 & 0.01 & 0.03 & 0.21 & 3.11 \\
+1518347 & 0.0\% & 0.00 & Running & 719635 & 13.24 & 286 & 26 & 1 & 13.30
+& 0.09 & 0.04 & 0.00 & 0.05 & 0.51 & 13.30 \\
+1455039 & -1.0\% & -0.01 & Running & 243584 & 24.36 & 175 & 23 & 4 &
+24.00 & 0.13 & 0.17 & 0.02 & 0.14 & 1.04 & 6.00 \\
+1465841 & -2.0\% & -0.02 & Running & 245259 & 49.18 & 691 & 184 & 23 &
+48.20 & 0.27 & 0.12 & 0.03 & 0.07 & 0.26 & 2.10 \\
+1431135 & -4.0\% & -0.04 & Running & 205528 & 17.44 & 593 & 232 & 4 &
+16.75 & 0.39 & 0.02 & 0.01 & 0.03 & 0.07 & 4.19 \\
+1790559 & -4.0\% & -0.04 & Running & 724172 & 6.22 & 105 & 23 & 2 & 6.00
+& 0.22 & 0.09 & 0.02 & 0.06 & 0.26 & 3.00 \\
+1629425 & -6.0\% & -0.06 & Running & 67396 & 7.41 & 703 & 43 & 3 & 7.00
+& 0.06 & 0.07 & 0.00 & 0.01 & 0.16 & 2.33 \\
+1465067 & -6.0\% & -0.06 & Running & 131585 & 10.59 & 293 & 99 & 10 &
+10.00 & 0.34 & 0.10 & 0.03 & 0.03 & 0.10 & 1.00 \\
+1455029 & -7.0\% & -0.07 & Running & 516180 & 51.83 & 695 & 72 & 8 &
+48.00 & 0.10 & 0.11 & 0.01 & 0.07 & 0.67 & 6.00 \\
+1807313 & -8.0\% & -0.08 & Running & 5142652 & 292.77 & 3394 & 508 & 107
+& 270.70 & 0.15 & 0.21 & 0.03 & 0.08 & 0.53 & 2.53 \\
+1888370 & -8.0\% & -0.08 & Running & 66798 & 5.83 & 224 & 72 & 2 & 5.35
+& 0.32 & 0.03 & 0.01 & 0.02 & 0.07 & 2.67 \\
+1246514 & -9.0\% & -0.09 & Running & 328911 & 40.82 & 695 & 128 & 15 &
+37.20 & 0.18 & 0.12 & 0.02 & 0.05 & 0.29 & 2.48 \\
+1769695 & -9.0\% & -0.09 & Running & 2368286 & 568.39 & 8610 & 2459 &
+204 & 517.80 & 0.29 & 0.08 & 0.02 & 0.06 & 0.21 & 2.54 \\
+1248334 & -10.0\% & -0.10 & Running & 198262 & 89.21 & 4494 & 963 & 30 &
+80.45 & 0.21 & 0.03 & 0.01 & 0.02 & 0.08 & 2.68 \\
+1293974 & -10.0\% & -0.10 & Running & 212212 & 27.55 & 1111 & 76 & 12 &
+24.90 & 0.07 & 0.16 & 0.01 & 0.02 & 0.33 & 2.08 \\
+1622511 & -12.0\% & -0.12 & Running & 971171 & 126.37 & 2423 & 699 & 44
+& 111.40 & 0.29 & 0.06 & 0.02 & 0.05 & 0.16 & 2.53 \\
+1123898 & -13.0\% & -0.13 & Running & 715027 & 201.63 & 7136 & 1027 & 70
+& 175.40 & 0.14 & 0.07 & 0.01 & 0.02 & 0.17 & 2.51 \\
+1123894 & -14.0\% & -0.14 & Running & 1271739 & 503.48 & 54418 & 2173 &
+171 & 432.00 & 0.04 & 0.08 & 0.00 & 0.01 & 0.20 & 2.53 \\
+1230728 & -14.0\% & -0.14 & Running & 207764 & 72.26 & 4336 & 1030 & 19
+& 62.10 & 0.24 & 0.02 & 0.00 & 0.01 & 0.06 & 3.27 \\
+1476461 & -14.0\% & -0.14 & Running & 153038 & 20.91 & 29 & 7 & 3 &
+18.00 & 0.24 & 0.43 & 0.10 & 0.62 & 2.57 & 6.00 \\
+1465049 & -16.0\% & -0.16 & Running & 1635916 & 163.94 & 2779 & 470 & 55
+& 137.70 & 0.17 & 0.12 & 0.02 & 0.05 & 0.29 & 2.50 \\
+1439559 & -18.0\% & -0.18 & Running & 1703352 & 17.75 & 407 & 51 & 2 &
+14.50 & 0.13 & 0.04 & 0.00 & 0.04 & 0.28 & 7.25 \\
+1465065 & -18.0\% & -0.18 & Running & 384745 & 31.07 & 23748 & 444 & 26
+& 25.60 & 0.02 & 0.06 & 0.00 & 0.00 & 0.06 & 0.98 \\
+1311751 & -19.0\% & -0.19 & Running & 103730 & 15.66 & 779 & 217 & 4 &
+12.75 & 0.28 & 0.02 & 0.01 & 0.02 & 0.06 & 3.19 \\
+1302115 & -20.0\% & -0.20 & Running & 269509 & 27.03 & 1657 & 242 & 2 &
+21.60 & 0.15 & 0.01 & 0.00 & 0.01 & 0.09 & 10.80 \\
+1807213 & -21.0\% & -0.21 & Running & 842796 & 112.97 & 2265 & 323 & 32
+& 88.70 & 0.14 & 0.10 & 0.01 & 0.04 & 0.27 & 2.77 \\
+1299307 & -23.0\% & -0.23 & Running & 52683 & 12.11 & 194 & 88 & 3 &
+9.30 & 0.45 & 0.03 & 0.02 & 0.05 & 0.11 & 3.10 \\
+1311613 & -23.0\% & -0.23 & Running & 146186 & 27.81 & 1048 & 367 & 6 &
+21.44 & 0.35 & 0.02 & 0.01 & 0.02 & 0.06 & 3.57 \\
+1790565 & -24.0\% & -0.24 & Running & 1060840 & 36.90 & 645 & 67 & 11 &
+28.00 & 0.10 & 0.16 & 0.02 & 0.04 & 0.42 & 2.55 \\
+1818071 & -27.0\% & -0.27 & Running & 1504483 & 194.68 & 1587 & 485 & 47
+& 141.80 & 0.31 & 0.10 & 0.03 & 0.09 & 0.29 & 3.02 \\
+1281952 & -29.0\% & -0.29 & Running & 817364 & 98.88 & 12203 & 763 & 29
+& 70.35 & 0.06 & 0.04 & 0.00 & 0.01 & 0.09 & 2.43 \\
+1332027 & -32.0\% & -0.32 & Running & 391803 & 51.15 & 1582 & 190 & 14 &
+34.80 & 0.12 & 0.07 & 0.01 & 0.02 & 0.18 & 2.49 \\
+1124638 & -34.0\% & -0.34 & Running & 721533 & 34.80 & 364 & 42 & 9 &
+23.10 & 0.12 & 0.21 & 0.02 & 0.06 & 0.55 & 2.57 \\
+1281956 & -34.0\% & -0.34 & Running & 557305 & 67.41 & 5607 & 328 & 18 &
+44.40 & 0.06 & 0.05 & 0.00 & 0.01 & 0.14 & 2.47 \\
+1790579 & -35.0\% & -0.35 & Running & 261234 & 6.16 & 118 & 26 & 1 &
+4.00 & 0.22 & 0.04 & 0.01 & 0.03 & 0.15 & 4.00 \\
+1379857 & -35.0\% & -0.35 & Running & 1404410 & 318.65 & 6881 & 1078 &
+87 & 208.21 & 0.16 & 0.08 & 0.01 & 0.03 & 0.19 & 2.39 \\
+1790577 & -35.0\% & -0.35 & Running & 332472 & 13.42 & 230 & 47 & 2 &
+8.75 & 0.20 & 0.04 & 0.01 & 0.04 & 0.19 & 4.38 \\
+1694159 & -37.0\% & -0.37 & Running & 152341 & 180.19 & 6696 & 480 & 44
+& 113.20 & 0.07 & 0.09 & 0.01 & 0.02 & 0.24 & 2.57 \\
+1234672 & -39.0\% & -0.39 & Running & 1987949 & 468.06 & 2510 & 689 &
+113 & 287.50 & 0.27 & 0.16 & 0.05 & 0.11 & 0.42 & 2.54 \\
+1431551 & -39.0\% & -0.39 & Running & 1024490 & 102.91 & 1412 & 309 & 25
+& 63.20 & 0.22 & 0.08 & 0.02 & 0.04 & 0.20 & 2.53 \\
+1431525 & -42.0\% & -0.42 & Running & 1618027 & 161.88 & 2683 & 467 & 38
+& 94.00 & 0.17 & 0.08 & 0.01 & 0.04 & 0.20 & 2.47 \\
+1465053 & -42.0\% & -0.42 & Running & 171961 & 17.20 & 519 & 71 & 2 &
+10.00 & 0.14 & 0.03 & 0.00 & 0.02 & 0.14 & 5.00 \\
+1696681 & -43.0\% & -0.43 & Running & 287111 & 34.46 & 558 & 109 & 8 &
+19.75 & 0.20 & 0.07 & 0.01 & 0.04 & 0.18 & 2.47 \\
+1807315 & -44.0\% & -0.44 & Running & 90804 & 4.62 & 77 & 9 & 1 & 2.60 &
+0.12 & 0.11 & 0.01 & 0.03 & 0.29 & 2.60 \\
+1487095 & -44.0\% & -0.44 & Running & 1054312 & 360.93 & 19561 & 2333 &
+79 & 202.50 & 0.12 & 0.03 & 0.00 & 0.01 & 0.09 & 2.56 \\
+1442739 & -45.0\% & -0.45 & Running & 4115776 & 511.59 & 125687 & 2937 &
+95 & 282.80 & 0.02 & 0.03 & 0.00 & 0.00 & 0.10 & 2.98 \\
+1694237 & -45.0\% & -0.45 & Running & 56436 & 7.98 & 247 & 12 & 2 & 4.40
+& 0.05 & 0.17 & 0.01 & 0.02 & 0.37 & 2.20 \\
+1311799 & -46.0\% & -0.46 & Running & 168583 & 48.78 & 6133 & 614 & 9 &
+26.55 & 0.10 & 0.01 & 0.00 & 0.00 & 0.04 & 2.95 \\
+1455041 & -47.0\% & -0.47 & Running & 339198 & 33.94 & 598 & 67 & 5 &
+18.00 & 0.11 & 0.07 & 0.01 & 0.03 & 0.27 & 3.60 \\
+1304003 & -48.0\% & -0.48 & Running & 17542 & 5.35 & 164 & 47 & 1 & 2.80
+& 0.29 & 0.02 & 0.01 & 0.02 & 0.06 & 2.80 \\
+1374979 & -50.0\% & -0.50 & Running & 447166 & 44.94 & 1875 & 222 & 11 &
+22.55 & 0.12 & 0.05 & 0.01 & 0.01 & 0.10 & 2.05 \\
+1694305 & -52.0\% & -0.52 & Running & 1849937 & 187.06 & 636 & 230 & 35
+& 88.90 & 0.36 & 0.15 & 0.06 & 0.14 & 0.39 & 2.54 \\
+1330557 & -52.0\% & -0.52 & Running & 407761 & 40.79 & 6521 & 351 & 6 &
+19.40 & 0.05 & 0.02 & 0.00 & 0.00 & 0.06 & 3.23 \\
+1305559 & -52.0\% & -0.52 & Running & 59423 & 17.19 & 1265 & 163 & 3 &
+8.20 & 0.13 & 0.02 & 0.00 & 0.01 & 0.05 & 2.73 \\
+1515581 & -53.0\% & -0.53 & Running & 7743195 & 247.15 & 7925 & 860 & 35
+& 117.20 & 0.11 & 0.04 & 0.00 & 0.01 & 0.14 & 3.35 \\
+1438955 & -55.0\% & -0.55 & Running & 197208 & 49.53 & 3517 & 206 & 9 &
+22.15 & 0.06 & 0.04 & 0.00 & 0.01 & 0.11 & 2.46 \\
+1300869 & -56.0\% & -0.56 & Running & 2090816 & 169.35 & 10245 & 255 &
+28 & 74.15 & 0.02 & 0.11 & 0.00 & 0.01 & 0.29 & 2.65 \\
+1244846 & -56.0\% & -0.56 & Running & 1129430 & 115.20 & 5188 & 497 & 21
+& 51.00 & 0.10 & 0.04 & 0.00 & 0.01 & 0.10 & 2.43 \\
+1439571 & -59.0\% & -0.59 & Running & 1029364 & 6.85 & 225 & 25 & 1 &
+2.80 & 0.11 & 0.04 & 0.00 & 0.01 & 0.11 & 2.80 \\
+1503703 & -60.0\% & -0.60 & Running & 154180 & 6.48 & 113 & 8 & 1 & 2.60
+& 0.07 & 0.12 & 0.01 & 0.02 & 0.32 & 2.60 \\
+1529843 & -60.0\% & -0.60 & Running & 245899 & 68.36 & 2578 & 419 & 9 &
+27.30 & 0.16 & 0.02 & 0.00 & 0.01 & 0.07 & 3.03 \\
+1244856 & -62.0\% & -0.62 & Running & 13340810 & 245.26 & 13314 & 765 &
+37 & 93.75 & 0.06 & 0.05 & 0.00 & 0.01 & 0.12 & 2.53 \\
+1529847 & -63.0\% & -0.63 & Running & 83075 & 13.89 & 741 & 88 & 2 &
+5.10 & 0.12 & 0.02 & 0.00 & 0.01 & 0.06 & 2.55 \\
+1248434 & -66.0\% & -0.66 & Running & 172890 & 22.61 & 1505 & 173 & 2 &
+7.75 & 0.11 & 0.01 & 0.00 & 0.01 & 0.04 & 3.88 \\
+1529841 & -66.0\% & -0.66 & Running & 450895 & 121.67 & 3955 & 543 & 21
+& 40.81 & 0.14 & 0.04 & 0.01 & 0.01 & 0.08 & 1.94 \\
+1518789 & -66.0\% & -0.66 & Running & 130671 & 13.07 & 442 & 80 & 2 &
+4.40 & 0.18 & 0.03 & 0.00 & 0.01 & 0.06 & 2.20 \\
+1282962 & -68.0\% & -0.68 & Running & 568825 & 85.36 & 817 & 74 & 5 &
+27.50 & 0.09 & 0.07 & 0.01 & 0.03 & 0.37 & 5.50 \\
+1293902 & -69.0\% & -0.69 & Running & 69384 & 16.55 & 1014 & 183 & 2 &
+5.17 & 0.18 & 0.01 & 0.00 & 0.01 & 0.03 & 2.59 \\
+1244732 & -70.0\% & -0.70 & Running & 862459 & 107.04 & 1453 & 633 & 13
+& 32.30 & 0.44 & 0.02 & 0.01 & 0.02 & 0.05 & 2.48 \\
+1311733 & -71.0\% & -0.71 & Running & 58817 & 12.73 & 316 & 76 & 1 &
+3.75 & 0.24 & 0.01 & 0.00 & 0.01 & 0.05 & 3.75 \\
+1253028 & -78.0\% & -0.78 & Running & 70575 & 10.73 & 1098 & 51 & 1 &
+2.40 & 0.05 & 0.02 & 0.00 & 0.00 & 0.05 & 2.40 \\
+1597933 & -81.0\% & -0.81 & Running & 257320 & 51.28 & 7777 & 143 & 4 &
+9.55 & 0.02 & 0.03 & 0.00 & 0.00 & 0.07 & 2.39 \\
+1272126 & -82.0\% & -0.82 & Running & 54473 & 22.31 & 803 & 176 & 2 &
+4.10 & 0.22 & 0.01 & 0.00 & 0.01 & 0.02 & 2.05 \\
+1487131 & -84.0\% & -0.84 & Running & 64577 & 30.35 & 413 & 132 & 2 &
+4.80 & 0.32 & 0.02 & 0.00 & 0.01 & 0.04 & 2.40 \\
+1272088 & -89.0\% & -0.89 & Running & 287232 & 57.45 & 528 & 71 & 2 &
+6.40 & 0.13 & 0.03 & 0.00 & 0.01 & 0.09 & 3.20 \\
+1311619 & -92.0\% & -0.92 & Running & 197487 & 32.02 & 1690 & 309 & 1 &
+2.50 & 0.18 & 0.00 & 0.00 & 0.00 & 0.01 & 2.50 \\
+1531913 & -100.0\% & -1.00 & Running & 3366 & 0.41 & 6 & 16 & 0 & 0.00 &
+2.67 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1698225 & -100.0\% & -1.00 & Running & 397 & 0.08 & 3 & 1 & 0 & 0.00 &
+0.33 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1490361 & -100.0\% & -1.00 & Running & 60563 & 1.02 & 22 & 4 & 0 & 0.00
+& 0.18 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1331973 & -100.0\% & -1.00 & Running & 10366 & 1.42 & 340 & 10 & 0 &
+0.00 & 0.03 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1534779 & -100.0\% & -1.00 & Running & 176 & 0.02 & 1 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1392449 & -100.0\% & -1.00 & Running & 4634 & 0.59 & 16 & 1 & 0 & 0.00 &
+0.06 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1281916 & -100.0\% & -1.00 & Running & 65718 & 8.01 & 121 & 19 & 0 &
+0.00 & 0.16 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1509843 & -100.0\% & -1.00 & Running & 58857 & 0.25 & 6 & 1 & 0 & 0.00 &
+0.17 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1293926 & -100.0\% & -1.00 & Running & 12928 & 1.37 & 26 & 1 & 0 & 0.00
+& 0.04 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1596067 & -100.0\% & -1.00 & Running & 2835 & 6.24 & 2866 & 48 & 0 &
+0.00 & 0.02 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1248468 & -100.0\% & -1.00 & Running & 6788 & 0.96 & 59 & 8 & 0 & 0.00 &
+0.14 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1248476 & -100.0\% & -1.00 & Running & 13900 & 1.46 & 137 & 4 & 0 & 0.00
+& 0.03 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1248478 & -100.0\% & -1.00 & Running & 5775 & 3.11 & 164 & 43 & 0 & 0.00
+& 0.26 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303927 & -100.0\% & -1.00 & Running & 10141 & 1.06 & 15 & 1 & 0 & 0.00
+& 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1257940 & -100.0\% & -1.00 & Running & 18518 & 3.17 & 144 & 5 & 0 & 0.00
+& 0.03 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1257942 & -100.0\% & -1.00 & Running & 15634 & 2.36 & 121 & 6 & 0 & 0.00
+& 0.05 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1248748 & -100.0\% & -1.00 & Running & 6753 & 1.08 & 35 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1515575 & -100.0\% & -1.00 & Running & 5249 & 0.31 & 5 & 2 & 0 & 0.00 &
+0.40 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1554511 & -100.0\% & -1.00 & Running & 72385 & 7.26 & 1675 & 218 & 0 &
+0.00 & 0.13 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1431127 & -100.0\% & -1.00 & Running & 20909 & 1.14 & 18 & 8 & 0 & 0.00
+& 0.44 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1282922 & -100.0\% & -1.00 & Running & 34988 & 3.50 & 135 & 14 & 0 &
+0.00 & 0.10 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1282924 & -100.0\% & -1.00 & Running & 19187 & 1.92 & 81 & 8 & 0 & 0.00
+& 0.10 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1418369 & -100.0\% & -1.00 & Running & 1246 & 0.13 & 11 & 3 & 0 & 0.00 &
+0.27 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1358753 & -100.0\% & -1.00 & Running & 91848 & 9.23 & 645 & 168 & 0 &
+0.00 & 0.26 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1442759 & -100.0\% & -1.00 & Running & 22132 & 2.62 & 27 & 2 & 0 & 0.00
+& 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1531849 & -100.0\% & -1.00 & Running & 4487 & 0.45 & 19 & 2 & 0 & 0.00 &
+0.11 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1608939 & -100.0\% & -1.00 & Running & 60697 & 1.99 & 52 & 3 & 0 & 0.00
+& 0.06 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303929 & -100.0\% & -1.00 & Running & 48652 & 4.91 & 91 & 6 & 0 & 0.00
+& 0.07 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303939 & -100.0\% & -1.00 & Running & 455 & 0.22 & 1 & 2 & 0 & 0.00 &
+2.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305561 & -100.0\% & -1.00 & Running & 6444 & 0.80 & 90 & 23 & 0 & 0.00
+& 0.26 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305567 & -100.0\% & -1.00 & Running & 2099 & 0.85 & 29 & 6 & 0 & 0.00 &
+0.21 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1287426 & -100.0\% & -1.00 & Running & 6091 & 1.21 & 18 & 6 & 0 & 0.00 &
+0.33 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1418305 & -100.0\% & -1.00 & Running & 58693 & 1.50 & 17 & 16 & 0 & 0.00
+& 0.94 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1790561 & -100.0\% & -1.00 & Running & 178923 & 3.84 & 62 & 2 & 0 & 0.00
+& 0.03 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1515645 & -100.0\% & -1.00 & Running & 19924 & 1.27 & 25 & 3 & 0 & 0.00
+& 0.12 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1302147 & -100.0\% & -1.00 & Running & 10462 & 2.62 & 244 & 29 & 0 &
+0.00 & 0.12 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1282978 & -100.0\% & -1.00 & Running & 2012 & 0.30 & 1 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1282986 & -100.0\% & -1.00 & Running & 15529 & 2.29 & 174 & 41 & 0 &
+0.00 & 0.24 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1282994 & -100.0\% & -1.00 & Running & 3158 & 0.40 & 14 & 5 & 0 & 0.00 &
+0.36 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1476373 & -100.0\% & -1.00 & Running & 13997 & 0.48 & 8 & 1 & 0 & 0.00 &
+0.12 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1552835 & -100.0\% & -1.00 & Running & 1027 & 0.10 & 3 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1442803 & -100.0\% & -1.00 & Running & 756 & 0.08 & 10 & 2 & 0 & 0.00 &
+0.20 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303921 & -100.0\% & -1.00 & Running & 1252 & 0.14 & 3 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303931 & -100.0\% & -1.00 & Running & 692 & 0.11 & 3 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305489 & -100.0\% & -1.00 & Running & 7985 & 2.30 & 114 & 27 & 0 & 0.00
+& 0.24 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305491 & -100.0\% & -1.00 & Running & 1025 & 0.17 & 1 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305493 & -100.0\% & -1.00 & Running & 237 & 0.10 & 2 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303923 & -100.0\% & -1.00 & Running & 4989 & 0.60 & 15 & 4 & 0 & 0.00 &
+0.27 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303935 & -100.0\% & -1.00 & Running & 2110 & 0.32 & 8 & 1 & 1 & 0.00 &
+0.12 & 1.00 & 0.12 & 0.00 & 0.00 & 0.00 \\
+1305513 & -100.0\% & -1.00 & Running & 30460 & 8.26 & 647 & 34 & 0 &
+0.00 & 0.05 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305517 & -100.0\% & -1.00 & Running & 437 & 0.06 & 3 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305519 & -100.0\% & -1.00 & Running & 1077 & 0.33 & 19 & 13 & 0 & 0.00
+& 0.68 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303925 & -100.0\% & -1.00 & Running & 3124 & 0.34 & 11 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303933 & -100.0\% & -1.00 & Running & 1665 & 0.25 & 3 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1305507 & -100.0\% & -1.00 & Running & 3095 & 0.42 & 11 & 1 & 0 & 0.00 &
+0.09 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1303999 & -100.0\% & -1.00 & Running & 401 & 0.16 & 24 & 8 & 0 & 0.00 &
+0.33 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1304001 & -100.0\% & -1.00 & Running & 18235 & 6.24 & 286 & 32 & 0 &
+0.00 & 0.11 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1503815 & -100.0\% & -1.00 & Running & 180849 & 3.90 & 67 & 17 & 0 &
+0.00 & 0.25 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1734263 & -100.0\% & -1.00 & Running & 9678 & 0.97 & 64 & 13 & 0 & 0.00
+& 0.20 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1807231 & -100.0\% & -1.00 & Running & 46675 & 8.33 & 257 & 88 & 0 &
+0.00 & 0.34 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1521599 & -100.0\% & -1.00 & Running & 1641 & 0.19 & 25 & 0 & 0 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+1245442 & NA & NaN & Running & 0 & 0.00 & 1 & 0 & 0 & 0.00 & 0.00 & 0.00
+& 0.00 & 0.00 & 0.00 & 0.00 \\
+1531921 & NA & NaN & Running & 39 & 0.00 & 1 & 0 & 0 & 0.00 & 0.00 &
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{total-data}{%
+\section{Total data}\label{total-data}}
+
+\hypertarget{total-cost}{%
+\subsection{Total cost}\label{total-cost}}
+
+\begin{verbatim}
+[1] 12,716.99
+\end{verbatim}
+
+\hypertarget{total-profit}{%
+\subsection{Total profit}\label{total-profit}}
+
+\begin{verbatim}
+[1] 68.84
+\end{verbatim}
+
+\hypertarget{total-revenue}{%
+\subsection{Total revenue}\label{total-revenue}}
+
+\begin{verbatim}
+[1] 12,785.83
+\end{verbatim}
+
+\hypertarget{total-conversions}{%
+\subsection{Total conversions}\label{total-conversions}}
+
+\begin{verbatim}
+[1] 4,807.00
+\end{verbatim}
+
+\end{document}
